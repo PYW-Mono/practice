@@ -8,8 +8,8 @@ html = b"""
 		</form>
 		<p>
 			<br>
-			합 = %(sum)s<br>
-			차 = %(mul)s<br>
+			Sum = %(sum)s<br>
+			Mul = %(mul)s<br>
 		</p>
 	</body>
 </html>
