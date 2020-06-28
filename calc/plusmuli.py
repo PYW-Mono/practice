@@ -5,9 +5,13 @@ def application(environ, start_response):
 	d = parse_qs(environ['QUERY_STRING'])
 	first_number = d.get('first_number', [0])[0]
 	second_number = d.get('second_number', [0])[0]
-	first_number, second_number = int(first_number), int(second_number)
-	sum=first_number+second_number			
-	mul=first_number*second_number
+	try:
+		first_number, second_number = int(first_number), int(second_number)
+		sum=first_number+second_number			
+		mul=first_number*second_number
+	except ValueError:
+		sum=-1
+		mul=-1
 
 	response_body = html % {
 		'sum': sum,
