@@ -3,16 +3,17 @@ from template import html
 
 def application(environ, start_response):
 	d = parse_qs(environ['QUERY_STRING'])
-	a = d.get('a', [0])[0]
-	b = d.get('b', [0])[0]
+	first_number = d.get('first_number', [''])[0]
+	second_number = d.get('second_number', [''])[0]
+	sum, mul = 0, 0
 	if '' not in [a, b]:
-		a, b = int(a), int(b)
-	        c=a+b			
-		d=a*b
+		first_number, second_number = int(first_number), int(second_number)
+	        sum=first_number+second_number			
+		mul=first_number*second_number
 
 	response_body = html % {
-		'c': c,
-		'd': d,
+		'sum': sum,
+		'mul': mul,
 	}
 	start_response('200 OK', [
 		('Content-Type', 'text/html'),

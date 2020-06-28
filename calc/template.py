@@ -2,13 +2,14 @@ html = b"""
 <html>
 	<body>
 		<form action="">
-			<input type="number" name="a">
-			+ <input type="number" name="b"><br>
+			<input type="number" name="first_number">
+			+ <input type="number" name="second_number"><br>
 			<input type="submit">
 		</form>
 		<p>
-			%(c)s<br>
-			%(d)s<br>
+			<br>
+			합 = %(sum)s<br>
+			차 = %(mul)s<br>
 		</p>
 	</body>
 </html>
