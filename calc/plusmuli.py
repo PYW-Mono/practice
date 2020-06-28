@@ -13,7 +13,7 @@ def application(environ, start_response):
 
 	response_body = html % {
 		'sum': sum,
-		'mul': mul,
+		'mul': mul
 	}
 	start_response('200 OK', [
 		('Content-Type', 'text/html'),
