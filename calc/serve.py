@@ -1,7 +1,7 @@
-WSGIScriptAlias /plmu /usr/local/swp2/plusmuli.py
-WSGIPythonPath /usr/local/swp2
+WSGIScriptAlias /serve /home/pyw20203069/gitpractice/practice/calc/plusmuli.py
+WSGIPythonPath /home/pyw20203069/gitpractice/practice/calc
 
-<Directory "/usr/local/swp2">
+<Directory "/home/pyw20203069/gitpractice/practice/calc">
 	AllowOverride None
 	Order deny,allow
 	Require all granted
